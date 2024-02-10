@@ -1,0 +1,24 @@
+version: 1
+default_environment: dev
+project_id: 6a478c9f-4303-441e-a6e9-be74be184718
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-facebook
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-facebook.git
+  - name: tap-tiktok
+    variant: gthesheep
+    pip_url: git+https://github.com/gthesheep/tap-tiktok.git
+  - name: tap-pipedrive
+    variant: singer-io
+    pip_url: tap-pipedrive
+  - name: tap-segment
+    variant: gthesheep
+    pip_url: git+https://github.com/GtheSheep/tap-segment.git
+  - name: tap-linkedin-ads
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-linkedin-ads.git

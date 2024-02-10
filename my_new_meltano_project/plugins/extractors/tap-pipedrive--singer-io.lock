@@ -1,0 +1,48 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-pipedrive",
+  "namespace": "tap_pipedrive",
+  "variant": "singer-io",
+  "label": "Pipedrive",
+  "docs": "https://hub.meltano.com/extractors/tap-pipedrive--singer-io",
+  "repo": "https://github.com/singer-io/tap-pipedrive",
+  "pip_url": "tap-pipedrive",
+  "description": "Sales CRM and Pipeline Management Software",
+  "logo_url": "https://hub.meltano.com/assets/logos/extractors/pipedrive.png",
+  "capabilities": [
+    "state",
+    "catalog",
+    "discover"
+  ],
+  "settings_group_validation": [
+    [
+      "api_token",
+      "start_date"
+    ]
+  ],
+  "settings": [
+    {
+      "name": "api_token",
+      "kind": "password",
+      "label": "API Token",
+      "description": "Your Pipedrive API token."
+    },
+    {
+      "name": "user-agent",
+      "label": "User Agent",
+      "description": "The user agent to send with requests."
+    },
+    {
+      "name": "request_timeout",
+      "kind": "integer",
+      "label": "Request Timeout",
+      "description": "The request timeout,  default 300 seconds."
+    },
+    {
+      "name": "start_date",
+      "kind": "date_iso8601",
+      "label": "Start Date",
+      "description": "Determines how much historical data will be extracted. Please be aware\nthat the larger the time period and amount of data, the longer the initial extraction\ncan be expected to take."
+    }
+  ]
+}
